@@ -13,12 +13,12 @@ Complex* getXk(int Xn[]){
             temp.real = 0;
             temp.img = 0;
 
-            // k is row of Xk, n is column of Xk
-            // Multiplication two matrices (Xk*Xn)
+            // k is row of Wn, n is column of Wn
+            // Multiplication two matrices (Wn*Xn)
             // Summation all real parts and imaginary parts to get the complex number
             for(int n=0; n<N; n++){
-               temp.real += wkArr[k][n].real * Xn[n];
-               temp.img += wkArr[k][n].img * Xn[n];
+               temp.real += wnArr[k][n].real * Xn[n];
+               temp.img += wnArr[k][n].img * Xn[n];
             } // End of n
 
             // Set the Complex of Xk in xkArr
