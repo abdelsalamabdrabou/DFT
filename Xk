@@ -1,0 +1,32 @@
+Complex* getXk(int Xn[]){
+        // Xn[] is the Discrete input values
+
+        // Creat dynamic complex number Xk which is named as xkArr
+        Complex *xkArr;
+        xkArr = new Complex[N];
+
+
+        for(int k=0; k<N; k++){
+
+            // Set temp = 0 to delete any old data & the last data in the last iterative
+            // temp which is variable its type complex in private of class
+            temp.real = 0;
+            temp.img = 0;
+
+            // k is row of Xk, n is column of Xk
+            // Multiplication two matrices (Xk*Xn)
+            // Summation all real parts and imaginary parts to get the complex number
+            for(int n=0; n<N; n++){
+               temp.real += wkArr[k][n].real * Xn[n];
+               temp.img += wkArr[k][n].img * Xn[n];
+            } // End of n
+
+            // Set the Complex of Xk in xkArr
+            xkArr[k].real = temp.real;
+            xkArr[k].img = temp.img;
+
+        }
+
+        // Return the address of xkArr which is used to locate the array when we need to use it.
+        return xkArr;
+    }
